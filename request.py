@@ -24,7 +24,8 @@ def get_seat_plans(show_id, session_id) -> list:
         'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Mobile Safari/537.36',
         'Content-Type': 'application/json'
     }
-    url = "https://m.piaoxingqiu.com/cyy_gatewayapi/show/pub/v3/show/" + show_id + "/show_session/" + session_id + "/seat_plans_static_data"
+    url = "https://m.piaoxingqiu.com/cyy_gatewayapi/show/pub/v5/show/" + show_id + "/session/" + session_id + "/seat_plans"
+    print(url)
     response = requests.get(url=url, headers=headers).json()
     if response["statusCode"] == 200:
         return response["data"]["seatPlans"]

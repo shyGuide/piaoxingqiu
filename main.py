@@ -9,7 +9,7 @@ session_id = config.session_id
 buy_count = config.buy_count
 audience_idx = config.audience_idx
 deliver_method = config.deliver_method
-seat_plan_id = ''
+seat_plan_id = config.seat_plan_id
 session_id_exclude = []  # 被排除掉的场次
 price = 0
 
